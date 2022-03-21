@@ -9,10 +9,10 @@ public class TabletPCCreator implements ApplianceCreator {
 	@Override
 	public TabletPC create(Criteria parsedCriteria) {
 		TabletPC tabletPC = new TabletPC();
-		tabletPC.setBatteryCapacity((int) parsedCriteria.getCriteria().get("BATTERY_CAPACITY"));
-		tabletPC.setDisplayInches((int) parsedCriteria.getCriteria().get("DISPLAY_INCHES"));
-		tabletPC.setMemoryRom((int) parsedCriteria.getCriteria().get("MEMORY_ROM"));
-		tabletPC.setFlashMemoryCapacity((int) parsedCriteria.getCriteria().get("FLASH_MEMORY_CAPACITY"));
+		tabletPC.setBatteryCapacity((Integer) parsedCriteria.getCriteria().get("BATTERY_CAPACITY"));
+		tabletPC.setDisplayInches((Integer) parsedCriteria.getCriteria().get("DISPLAY_INCHES"));
+		tabletPC.setMemoryRom((Integer) parsedCriteria.getCriteria().get("MEMORY_ROM"));
+		tabletPC.setFlashMemoryCapacity((Integer) parsedCriteria.getCriteria().get("FLASH_MEMORY_CAPACITY"));
 		tabletPC.setColor((String) parsedCriteria.getCriteria().get("COLOR"));
 		return tabletPC;
 	}

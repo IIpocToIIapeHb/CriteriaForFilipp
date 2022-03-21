@@ -19,7 +19,7 @@ public class ApplianceCreatorFactory {
 		case "TabletPC":
 			return new TabletPCCreator();
 		default:
-			throw new UnsupportedOperationException();
+			throw new UnsupportedOperationException("Unknown type=" + type);
 		}
 	}
 }

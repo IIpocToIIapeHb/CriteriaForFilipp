@@ -9,10 +9,10 @@ public class SpeakersCreator implements ApplianceCreator {
 	@Override
 	public Speakers create(Criteria parsedCriteria) {
 		Speakers speakers = new Speakers();
-		speakers.setPowerConsumption((int) parsedCriteria.getCriteria().get("POWER_CONSUMPTION"));
-		speakers.setNumberOfSpeakers((int) parsedCriteria.getCriteria().get("NUMBER_OF_SPEAKERS"));
+		speakers.setPowerConsumption((Integer) parsedCriteria.getCriteria().get("POWER_CONSUMPTION"));
+		speakers.setNumberOfSpeakers((Integer) parsedCriteria.getCriteria().get("NUMBER_OF_SPEAKERS"));
 		speakers.setFrequencyRange((String) parsedCriteria.getCriteria().get("FREQUENCY_RANGE"));
-		speakers.setCordLength((int) parsedCriteria.getCriteria().get("CORD_LENGTH"));
+		speakers.setCordLength((Integer) parsedCriteria.getCriteria().get("CORD_LENGTH"));
 		return speakers;
 	}
 

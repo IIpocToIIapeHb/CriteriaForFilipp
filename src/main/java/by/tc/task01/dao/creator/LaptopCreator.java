@@ -9,12 +9,12 @@ public class LaptopCreator implements ApplianceCreator {
 	@Override
 	public Laptop create(Criteria parsedCriteria) {
 		Laptop laptop = new Laptop();
-		laptop.setBatteryCapacity((int) parsedCriteria.getCriteria().get("BATTERY_CAPACITY"));
+		laptop.setBatteryCapacity((Integer) parsedCriteria.getCriteria().get("BATTERY_CAPACITY"));
 		laptop.setOS((String) parsedCriteria.getCriteria().get("OS"));
-		laptop.setMemoryRom((int) parsedCriteria.getCriteria().get("MEMORY_ROM=4000"));
-		laptop.setSystemMemory((int) parsedCriteria.getCriteria().get("SYSTEM_MEMORY"));
-		laptop.setCPU((int) parsedCriteria.getCriteria().get("CPU"));
-		laptop.setDisplayInches((int) parsedCriteria.getCriteria().get("DISPLAY_INCHS"));
+		laptop.setMemoryRom((Integer) parsedCriteria.getCriteria().get("MEMORY_ROM=4000"));
+		laptop.setSystemMemory((Integer) parsedCriteria.getCriteria().get("SYSTEM_MEMORY"));
+		laptop.setCPU((Integer) parsedCriteria.getCriteria().get("CPU"));
+		laptop.setDisplayInches((Integer) parsedCriteria.getCriteria().get("DISPLAY_INCHS"));
 		return laptop;
 	}
 

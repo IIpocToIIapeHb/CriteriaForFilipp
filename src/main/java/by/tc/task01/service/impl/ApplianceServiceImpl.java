@@ -14,7 +14,7 @@ public class ApplianceServiceImpl implements ApplianceService{
 
 	public List<Appliance> find(Criteria criteria) throws DAOException {
 		if (!Validator.criteriaValidator(criteria)) {
-			return null;
+			throw new RuntimeException("The value in criteria is wrong");
 		}
 		
 		DAOFactory factory = DAOFactory.getInstance();

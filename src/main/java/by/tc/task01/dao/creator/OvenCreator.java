@@ -6,29 +6,30 @@ import by.tc.task01.entity.criteria.Criteria;
 
 public class OvenCreator implements ApplianceCreator {
 
-	@Override
-	public Oven create(Criteria  parsedCriteria) {
-		Oven oven = new Oven();
-		oven.setPowerConsumption((int) parsedCriteria.getCriteria().get("POWER_CONSUMPTION"));
-		oven.setWeight((int) parsedCriteria.getCriteria().get("WEIGHT"));
-		oven.setCapacity((int) parsedCriteria.getCriteria().get("CAPACITY"));
-		oven.setDepth((int) parsedCriteria.getCriteria().get("DEPTH"));
-		
-		
-		if (parsedCriteria.getCriteria().get("HEIGHT") instanceof Integer) {
-			oven.setHeight((double) ((int)parsedCriteria.getCriteria().get("HEIGHT")));
-		} else {
-		oven.setHeight((double) parsedCriteria.getCriteria().get("HEIGHT"));}
-		
-		
-		
-		if (parsedCriteria.getCriteria().get("WIDTH") instanceof Integer) {
-			oven.setWidth((double) ((int)parsedCriteria.getCriteria().get("WIDTH")));
-		} else {
-		oven.setWidth((double) parsedCriteria.getCriteria().get("WIDTH"));}
-		
-		
-		return oven;
-	}
+    @Override
+    public Oven create(Criteria parsedCriteria) {
+        Oven oven = new Oven();
+        oven.setPowerConsumption((Integer) parsedCriteria.getCriteria().get("POWER_CONSUMPTION"));
+        oven.setWeight((Integer) parsedCriteria.getCriteria().get("WEIGHT"));
+        oven.setCapacity((Integer) parsedCriteria.getCriteria().get("CAPACITY"));
+        oven.setDepth((Integer) parsedCriteria.getCriteria().get("DEPTH"));
+
+
+        if (parsedCriteria.getCriteria().get("HEIGHT") instanceof Integer) {
+            oven.setHeight((double)((Integer) parsedCriteria.getCriteria().get("HEIGHT")));
+        } else {
+            oven.setHeight((Double) parsedCriteria.getCriteria().get("HEIGHT"));
+        }
+
+
+        if (parsedCriteria.getCriteria().get("WIDTH") instanceof Integer) {
+            oven.setWidth((double)(int) ((Integer) parsedCriteria.getCriteria().get("WIDTH")));
+        } else {
+            oven.setWidth((Double) parsedCriteria.getCriteria().get("WIDTH"));
+        }
+
+
+        return oven;
+    }
 
 }

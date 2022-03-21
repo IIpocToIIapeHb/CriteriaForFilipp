@@ -53,34 +53,5 @@ public class CriteriaParser {
 		return result;
 	}
 
-	public boolean match(Criteria criteriaFromLine, Criteria criteria) {
-		
-		
-		  if  (!criteria.getGroupSearchName().equals(criteriaFromLine.getGroupSearchName()) ){
-			  return false;
-			  }
-		 
-		for (Map.Entry<String, Object> criteriaProperty : criteria.getCriteria().entrySet()) {
 
-			Object parsedPropertyValue = criteriaFromLine.getCriteria().get(criteriaProperty.getKey());
-
-			if (criteriaProperty.getValue() instanceof String) {
-				String StringCriteriaPropertyValue = (String) criteriaProperty.getValue();
-				String StringParsedPropertyValue = (String) parsedPropertyValue;
-				
-				if (!StringCriteriaPropertyValue.equalsIgnoreCase(StringParsedPropertyValue)) {
-					return false;
-				}
-				
-			} else {
-
-				if (!criteriaProperty.getValue().equals(parsedPropertyValue)) {
-					return false;
-
-				}
-			}
-		}
-
-		return true;
-	}
 }

@@ -9,12 +9,12 @@ public class RefrigeratorCreator implements ApplianceCreator {
 	@Override
 	public Refrigerator create(Criteria parsedCriteria) {
 		Refrigerator refrigerator = new Refrigerator();
-		refrigerator.setPowerConsumption((int) parsedCriteria.getCriteria().get("POWER_CONSUMPTION"));
-		refrigerator.setWeight((int) parsedCriteria.getCriteria().get("WEIGHT"));
-		refrigerator.setFreezerCapacity((int) parsedCriteria.getCriteria().get("FREEZER_CAPACITY"));
-		refrigerator.setOverallCapacity((int) parsedCriteria.getCriteria().get("OVERALL_CAPACITY"));
-		refrigerator.setHeight((int) parsedCriteria.getCriteria().get("HEIGHT"));
-		refrigerator.setWidth((int) parsedCriteria.getCriteria().get("WIDTH"));
+		refrigerator.setPowerConsumption((Integer) parsedCriteria.getCriteria().get("POWER_CONSUMPTION"));
+		refrigerator.setWeight((Integer) parsedCriteria.getCriteria().get("WEIGHT"));
+		refrigerator.setFreezerCapacity((Integer) parsedCriteria.getCriteria().get("FREEZER_CAPACITY"));
+		refrigerator.setOverallCapacity((Integer) parsedCriteria.getCriteria().get("OVERALL_CAPACITY"));
+		refrigerator.setHeight((Integer) parsedCriteria.getCriteria().get("HEIGHT"));
+		refrigerator.setWidth((Integer) parsedCriteria.getCriteria().get("WIDTH"));
 		return refrigerator;
 	}
 
