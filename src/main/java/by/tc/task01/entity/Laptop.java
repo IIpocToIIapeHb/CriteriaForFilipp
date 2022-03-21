@@ -13,10 +13,7 @@ public class Laptop implements Appliance, Serializable {
     private double CPU;
     private int displayInches;
 
-    public Laptop() {
-    }
-
-    ;
+    public Laptop() { };
 
     public Laptop(int batteryCapacity, String OS, int memoryRom, int systemMemory, double CPU, int displayInches) {
         super();
